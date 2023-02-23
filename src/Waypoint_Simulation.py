@@ -117,11 +117,6 @@ class OffbPosCtl:
                 self.waypointIndex = 0
                 self.sim_ctr += 1
 
-            if self.waypointIndex == 1 :
-                print("Reached Probe Location")
-            elif self.waypointIndex == 4 :
-                print("Reached Rock Location")
-
             if self.isReadyToFly:
                 des = self.set_desired_pose().position
                 azimuth = math.atan2(self.curr_rover_pose.pose.position.y - self.curr_drone_pose.pose.position.y,
